@@ -2,6 +2,5 @@
     command = "npm run build"
     publish = "dist"
 
-
 [context.production.environment]
-  NODE_VERSION = "18.x"  # or "20.x" for Node.js 20 LTS
+  NODE_VERSION = "23.2.0"  # or "22.11.0" for Node.js 20 LTS
