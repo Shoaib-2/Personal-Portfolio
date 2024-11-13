@@ -1,3 +1,3 @@
 [build]
-  command = "npm run build"  # The build command to create the production files
-  publish = "dist"           # The directory that Netlify will use to serve your site
+    command = "npm run build"
+    publish = "dist"
