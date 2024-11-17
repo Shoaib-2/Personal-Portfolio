@@ -14,15 +14,13 @@ import {
     mongodb,
     git,
     figma,
-    // docker,
-    // meta,
     radicalX,
-    // tesla,
-    // shopify,
     portfolio,
     sorting,
     threejs,
     chatMessenger,
+    brandlingVilla,
+    outlierLogo
   } from "../assets";
   
   export const navLinks = [
@@ -116,6 +114,34 @@ import {
   ];
   
   const experiences = [
+      // Outlier
+      {
+        title: "AI Trainer",
+        company_name: "Outlier",
+        icon: outlierLogo,
+        iconBg: "#ffffff",
+        date: "May 2024 - Present",
+        points: [
+          "Employed as an AI Trainer, focusing on ensuring the accuracy and integrity of artificial intelligence models by leveraging expertise in JavaScript,Python and Generalist.",
+          "Created 30+ prompts daily to train and test AI models. Enhanced 50+ prompts monthly to achieve consistent accuracy across various formats.",
+          "Identified and resolved 95% of reported errors within 24 hours. Utilized data analysis tools to track and measure the performance of AI models, achieving a 95% success rate in detecting anomalies and optimizing for efficiency."
+        ],
+      },
+
+     // Brandling Villa
+     {
+      title: "Volunteer Frontend Developer",
+      company_name: "Frank & Bird Ltd",
+      icon: brandlingVilla,
+      iconBg: "#ffffff",
+      date: "February 2024 - March 2024",
+      points: [
+        "Developed a user-friendly restaurant website, leveraging JavaScript (React.js), as a Front-end Developer.",
+        "Designed the website through Figma, driving a 40% boost in user engagement metrics.",
+        "Collaborated with restaurant owners to refine menu layout and online ordering processes, culminating in a 25% uptick in customer footfall post-launch.",
+      ],
+    },
+    //RadicalX
     {
       title: "Software Engineer Intern",
       company_name: "RadicalX AI",
@@ -123,40 +149,15 @@ import {
       iconBg: "#ffffff",
       date: "November 2023 - January 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Leveraged OpenAI, Vertex AI, and TensorFlow to improve the functionality and performance of ReX, achieving a 20% increase in user engagement metrics.",
+        "Established Git/GitHub-based version control and implemented CI/CD pipelines, reducing manual errors during testing, integration, and deployment by 40% which significantly improved the efficiency and reliability of software releases.",
+        "Adopted agile methodologies to ensure regular updates, iterative improvements, and effective collaboration for a chat application project.",
       ],
     },
+
+   
   ];
   
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
   
   const projects = [
     {
@@ -224,4 +225,4 @@ import {
     },
   ];
   
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, projects };

@@ -24,8 +24,10 @@ import threejs from "./tech/threejs.svg";
 
 
 import radicalX from "./company/RadicalX.png";
-import portfolio from "./3dportfolio.png"
-import sorting from "./visualsorting.png"
+import brandlingVilla from "./company/BrandingLogo.png";
+import outlierLogo from "./company/outlierLogo.png";
+import portfolio from "./3dportfolio.png";
+import sorting from "./visualsorting.png";
 import chatMessenger from "./gptai_demo.png";
 
 export {
@@ -51,6 +53,8 @@ export {
   typescript,
   threejs,
   radicalX,
+  brandlingVilla,
+  outlierLogo,
   portfolio,
   sorting,
   chatMessenger,
