@@ -29,6 +29,8 @@ import outlierLogo from "./company/outlierLogo.png";
 import portfolio from "./3dportfolio.png";
 import sorting from "./visualsorting.png";
 import chatMessenger from "./gptai_demo.png";
+import VolunteerVilla from "../assets/brandlingVilla.png"
+import reactNative from "../assets/reactNative.jpg"
 
 export {
   logo,
@@ -58,4 +60,6 @@ export {
   portfolio,
   sorting,
   chatMessenger,
+  VolunteerVilla,
+  reactNative
 };

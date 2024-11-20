@@ -20,7 +20,9 @@ import {
     threejs,
     chatMessenger,
     brandlingVilla,
-    outlierLogo
+    outlierLogo,
+    VolunteerVilla,
+    reactNative
   } from "../assets";
   
   export const navLinks = [
@@ -223,6 +225,59 @@ import {
       image: chatMessenger,
       source_code_link: "https://github.com/Shoaib-2/ChatMessengerAI",
     },
+
+    {
+      name: "The Brandling Villa",
+      description:
+        "A pub restaurant website for a client. This is a static version with limited number of features, yet scalable for future usage. This was a Volunteered project, when I started web development.",
+      tags: [
+        {
+          name: "React",
+          color: "green-text-gradient",
+        },
+        {
+          name: "HTML",
+          color: "green-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: VolunteerVilla,
+      source_code_link: "https://villa-restaurant.vercel.app/",
+    },
+
+    {
+      name: "Roar",
+      description:
+        "Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community. As a learning experience, this was one of the toughest project.",
+      tags: [
+        {
+          name: "React Native",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Expo",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Nativewind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Animatable",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Appwrite",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: reactNative,
+      source_code_link: "https://github.com/Shoaib-2/Roar-react-native-",
+    },
   ];
+  
   
   export { services, technologies, experiences, projects };
