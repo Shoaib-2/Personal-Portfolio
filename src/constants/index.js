@@ -1,7 +1,6 @@
 import {
     mobile,
     backend,
-    creator,
     web,
     javascript,
     typescript,
@@ -22,7 +21,8 @@ import {
     brandlingVilla,
     outlierLogo,
     VolunteerVilla,
-    reactNative
+    reactNative,
+    seoTool,
   } from "../assets";
   
   export const navLinks = [
@@ -57,10 +57,6 @@ import {
     {
       title: "Backend Developer",
       icon: backend,
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
     },
   ];
   
@@ -156,8 +152,6 @@ import {
         "Adopted agile methodologies to ensure regular updates, iterative improvements, and effective collaboration for a chat application project.",
       ],
     },
-
-   
   ];
   
   
@@ -181,7 +175,7 @@ import {
         },
       ],
       image: portfolio,
-      source_code_link: "https://github.com/Shoaib-2/3D-Portfolio",
+      source_code_link: "https://github.com/Shoaib-2/Personal-Portfolio",
     },
     {
       name: "Sorting Visualization",
@@ -276,6 +270,32 @@ import {
       ],
       image: reactNative,
       source_code_link: "https://github.com/Shoaib-2/Roar-react-native-",
+    },
+
+    {
+      name: "The SEO Sidekick",
+      description:
+        "This project is a comprehensive SEO analysis tool that helps users analyze and optimize their website's SEO performance. It includes features such as keyword tracking, SEO analysis, and export options for generating reports.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Node.js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TailwindCSS",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MongoDB",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: seoTool,
+      source_code_link: "https://github.com/Shoaib-2/SeoTool",
     },
   ];
   

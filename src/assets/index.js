@@ -31,6 +31,7 @@ import sorting from "./visualsorting.png";
 import chatMessenger from "./gptai_demo.png";
 import VolunteerVilla from "../assets/brandlingVilla.png"
 import reactNative from "../assets/reactNative.jpg"
+import seoTool from "../assets/seoTool.png"
 
 export {
   logo,
@@ -61,5 +62,6 @@ export {
   sorting,
   chatMessenger,
   VolunteerVilla,
-  reactNative
+  reactNative,
+  seoTool
 };
