@@ -58,7 +58,7 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
       <div className="w-full flex flex-col md:flex-row">
-        <motion.p variants= {fadeIn("", "", 0.1, 1)}
+        <motion.p variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Following projects showcases my skills and experience through
