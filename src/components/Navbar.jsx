@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {styles} from '../style'
 import {navLinks} from '../constants'
 import { logo, menu, close } from '../assets'
-import Software_DeveloperCV from '../assets/pdf/Software_DeveloperCV.pdf'
+import Software_DeveloperCV from '../assets/pdf/Software_DeveloperCV_Updated.pdf'
 
 
 

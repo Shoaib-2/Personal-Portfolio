@@ -4,9 +4,15 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Earth = () => {
-  const earth = useGLTF("./planet/scene.gltf");
+  const { scene, error } = useGLTF("/planet/scene.gltf");
+
+  if (error) {
+    console.error("Error loading GLTF model:", error);
+    return null;
+  }
+
   return (
-    <primitive object={earth.scene} scale={2.5} position-y={0} rotation-y={0} />
+    <primitive object={scene} scale={2.5} position-y={0} rotation-y={0} />
   );
 };
 
@@ -30,8 +36,8 @@ const EarthCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        
         <Earth />
+        <Preload all />
       </Suspense>
     </Canvas>
   );

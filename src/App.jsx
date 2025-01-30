@@ -1,5 +1,5 @@
 import {BrowserRouter} from 'react-router-dom'
-import{About, Contact, Experience, Navbar, Tech, Works, StarsCanvas} from './components'
+import{About, Contact, Experience, Navbar, Works, StarsCanvas} from './components'
 import Footer from './components/Footer'
 
 const App = () => {
@@ -11,7 +11,6 @@ const App = () => {
         </div>
         <About/>
         <Experience/>
-        <Tech/>
         <Works/>
         <div className="relative z-0">
           <Contact />

@@ -50,7 +50,6 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link })
   )
 }
 
-
 const Works = () => {
   return (
     <>
@@ -58,9 +57,9 @@ const Works = () => {
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
-      <div className="w-full flex ">
+      <div className="w-full flex flex-col md:flex-row">
         <motion.p variants= {fadeIn("", "", 0.1, 1)}
-        className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px] sm:w-[360px]"
+        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
