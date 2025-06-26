@@ -28,9 +28,8 @@ import {
       title: "Contact",
     },
     {
-      id: "CV",
-      title: "Download CV",
-      download: true,
+      id: "Projects",
+      title: "Projects",
     },
   ];
   
