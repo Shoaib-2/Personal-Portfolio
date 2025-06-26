@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {styles} from '../style'
 import {navLinks} from '../constants'
 import { logo, menu, close } from '../assets'
-import Software_DeveloperCV from '../assets/pdf/Software_DeveloperCV_Updated.pdf'
+import resume_shoaib_mohammed from '../assets/pdf/resume_shoaib_mohammed.pdf'
 
 
 
@@ -30,7 +30,7 @@ const Navbar = () => {
               :'text-secondary'} 
               hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(Link.title)}>
-                <a href={Link.download ? Software_DeveloperCV : `#${Link.id}`} download={Link.download ? "MohammedShoaibCV.pdf" : undefined}>{Link.title}</a>
+                <a href={Link.download ? resume_shoaib_mohammed : `#${Link.id}`} download={Link.download ? "MohammedShoaibCV.pdf" : undefined}>{Link.title}</a>
               </li>
             ))}
 
@@ -53,7 +53,7 @@ const Navbar = () => {
                   setToggle(!toggle)
                   setActive(Link.title)
                   }}>
-                   <a href={Link.download ? Software_DeveloperCV : `#${Link.id}`} download={Link.download ? "MohammedShoaibCV.pdf" : undefined}>{Link.title}</a>
+                   <a href={Link.download ? resume_shoaib_mohammed : `#${Link.id}`} download={Link.download ? "MohammedShoaibCV.pdf" : undefined}>{Link.title}</a>
                   </li>
                 ))}
                 </ul>

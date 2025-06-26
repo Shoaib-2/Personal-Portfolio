@@ -32,7 +32,7 @@ import chatMessenger from "./gptai_demo.png";
 import VolunteerVilla from "../assets/brandlingVilla.png"
 import reactNative from "../assets/reactNative.jpg"
 import seoTool from "../assets/seoTool.png"
-
+import SendStream from "../assets/SendStream.png";
 export {
   logo,
   backend,
@@ -63,5 +63,6 @@ export {
   chatMessenger,
   VolunteerVilla,
   reactNative,
-  seoTool
+  seoTool,
+  SendStream
 };

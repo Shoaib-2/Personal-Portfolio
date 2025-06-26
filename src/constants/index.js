@@ -11,6 +11,7 @@ import {
     VolunteerVilla,
     reactNative,
     seoTool,
+    SendStream,
   } from "../assets";
   
   export const navLinks = [
@@ -51,29 +52,29 @@ import {
   const experiences = [
       // Outlier
       {
-        title: "AI Trainer",
+        title: "AI Prompt Engineer",
         company_name: "Outlier",
         icon: outlierLogo,
         iconBg: "#ffffff",
         date: "May 2024 - Present",
         points: [
-          "Employed as an AI Trainer, focusing on ensuring the accuracy and integrity of artificial intelligence models by leveraging expertise in JavaScript,Python and Generalist.",
-          "Created 30+ prompts daily to train and test AI models. Enhanced 50+ prompts monthly to achieve consistent accuracy across various formats.",
-          "Identified and resolved 95% of reported errors within 24 hours. Utilized data analysis tools to track and measure the performance of AI models, achieving a 95% success rate in detecting anomalies and optimizing for efficiency."
+          "Engineered and optimized prompt logic for NLP systems, increasing model response accuracy to 95%+ across 1,000+ edge cases.",
+          "Automated test pipelines using JavaScript and Python, improving release stability and regression tracking.",
+          "Collaborated cross-functionally with devs and data scientists to deploy scalable, real-time response systems."
         ],
       },
 
      // Brandling Villa
      {
-      title: "Volunteer Frontend Developer",
+      title: "Frontend Developer – Volunteer",
       company_name: "Frank & Bird Ltd",
       icon: brandlingVilla,
       iconBg: "#ffffff",
       date: "February 2024 - March 2024",
       points: [
-        "Developed a user-friendly restaurant website, leveraging JavaScript (React.js), as a Front-end Developer.",
-        "Designed the website through Figma, driving a 40% boost in user engagement metrics.",
-        "Collaborated with restaurant owners to refine menu layout and online ordering processes, culminating in a 25% uptick in customer footfall post-launch.",
+        "Delivered a fully responsive, mobile-first web interface using React and Tailwind CSS, meeting WCAG 2.1 standards.",
+        "Integrated dynamic API-driven content, cutting page load times by 30% and increasing booking conversion by 25%.",
+        "Partnered with stakeholders to redesign user flow, improving site engagement through streamlined UI interactions.",
       ],
     },
     //RadicalX
@@ -84,9 +85,9 @@ import {
       iconBg: "#ffffff",
       date: "November 2023 - January 2024",
       points: [
-        "Leveraged OpenAI, Vertex AI, and TensorFlow to improve the functionality and performance of ReX, achieving a 20% increase in user engagement metrics.",
-        "Established Git/GitHub-based version control and implemented CI/CD pipelines, reducing manual errors during testing, integration, and deployment by 40% which significantly improved the efficiency and reliability of software releases.",
-        "Adopted agile methodologies to ensure regular updates, iterative improvements, and effective collaboration for a chat application project.",
+        "Shipped production-ready components in React and TypeScript for a live AI chat platform, boosting user retention by 20%.",
+        "Reduced app latency by 35% through optimized rendering and caching strategies.",
+        "Contributed to Agile sprints, Git-based workflows, and code reviews in a remote, distributed team.",
       ],
     },
   ];
@@ -135,28 +136,6 @@ import {
       image: sorting,
       source_code_link: "https://github.com/Shoaib-2/Sorting-Visualization",
     },
-    {
-      name: "GPT ChatMessenger",
-      description:
-        "This project entails developing a sophisticated chat messenger application integrating OpenAI API, powered by a tech stack comprising Node.js, Express, React, and MongoDB for seamless user experiences. Key features include intelligent responses, real-time communication, and scalable architecture.",
-      tags: [
-        {
-          name: "nodejs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "React",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Express",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: chatMessenger,
-      source_code_link: "https://github.com/Shoaib-2/ChatMessengerAI",
-    },
-
     {
       name: "The Brandling Villa",
       description:
@@ -233,6 +212,39 @@ import {
       ],
       image: seoTool,
       source_code_link: "https://github.com/Shoaib-2/SeoTool",
+    },
+     {
+      name: "SendStream",
+      description:
+        "SendStream is a SaaS platform I built to automate, schedule, and analyze email campaigns with seamless Mailchimp integration. In beta, it has processed 1,000+ newsletters and managed over 10,000 subscribers for early users. Built with Next.js and Node.js, it delivers real-time analytics, secure flows, and a modern, user-friendly experience.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Node.js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MongoDB",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TailwindCSS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Next.js",
+          color: "green-text-gradient",
+        },
+      ],
+      image: SendStream,
+      source_code_link: "https://client-3ye4.onrender.com/",
     },
   ];
   
