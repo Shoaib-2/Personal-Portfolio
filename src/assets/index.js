@@ -21,18 +21,17 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-
-
 import radicalX from "./company/RadicalX.png";
 import brandlingVilla from "./company/BrandingLogo.png";
 import outlierLogo from "./company/outlierLogo.png";
 import portfolio from "./3dportfolio.png";
 import sorting from "./visualsorting.png";
 import chatMessenger from "./gptai_demo.png";
-import VolunteerVilla from "../assets/brandlingVilla.png"
-import reactNative from "../assets/reactNative.jpg"
-import seoTool from "../assets/seoTool.png"
-import SendStream from "../assets/SendStream.png";
+import VolunteerVilla from "./brandlingVilla.png";
+import reactNative from "./reactNative.jpg";
+import seoTool from "./seoTool.png";
+import SendStream from "./SendStream.png";
+
 export {
   logo,
   backend,

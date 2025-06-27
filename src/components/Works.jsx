@@ -24,6 +24,7 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link })
             className="w-full h-full object-cover rounded-2xl"
             loading="lazy"
             decoding="async"
+            onError={e => { e.target.onerror = null; e.target.src = require('../assets/placeholder.png'); }}
           />
 
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
@@ -60,9 +61,9 @@ const Works = () => {
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
-      <div className="w-full flex flex-col md:flex-row">
+      <div className="w-full flex flex-col md:flex-row xl:flex-row xl:items-center xl:justify-center">
         <motion.p variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-secondary text-[16px] md:text-[17px] max-w-3xl leading-[28px] md:leading-[30px] px-2 md:px-0 xl:px-0 text-center xl:text-left"
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -71,7 +72,7 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-7 px-2 md:px-4 xl:px-0">
         {projects.map((project, index) => (
           <ProjectCard 
           key={`project-${index}`}
