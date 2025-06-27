@@ -61,9 +61,9 @@ const Works = () => {
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
-      <div className="w-full flex flex-col md:flex-row xl:flex-row xl:items-center xl:justify-center">
+      <div className="w-full flex-col md:flex-row xl:flex-row xl:items-center xl:justify-center">
         <motion.p variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[16px] md:text-[17px] max-w-3xl leading-[28px] md:leading-[30px] px-2 md:px-0 xl:px-0 text-center xl:text-left"
+        className="mt-4 text-secondary text-[16px] md:text-[17px] max-w-3xl leading-[28px] md:leading-[30px] px-2 md:px-0 xl:px-0 text-left"
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with

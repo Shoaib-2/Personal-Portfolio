@@ -24,13 +24,13 @@ import threejs from "./tech/threejs.svg";
 import radicalX from "./company/RadicalX.png";
 import brandlingVilla from "./company/BrandingLogo.png";
 import outlierLogo from "./company/outlierLogo.png";
-import portfolio from "./3dportfolio.png";
-import sorting from "./visualsorting.png";
+import portfolio from "./3dportfolio.webp";
+import sorting from "./visualsorting.webp";
 import chatMessenger from "./gptai_demo.png";
-import VolunteerVilla from "./brandlingVilla.png";
-import reactNative from "./reactNative.jpg";
-import seoTool from "./seoTool.png";
-import SendStream from "./SendStream.png";
+import VolunteerVilla from "./brandlingVilla.webp";
+import reactNative from "./reactNative.webp";
+import seoTool from "./seoTool.webp";
+import SendStream from "./SendStream.webp";
 
 export {
   logo,
