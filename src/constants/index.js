@@ -5,13 +5,15 @@ import {
     radicalX,
     portfolio,
     sorting,
-    chatMessenger,
     brandlingVilla,
     outlierLogo,
     VolunteerVilla,
     reactNative,
     seoTool,
     SendStream,
+    html,
+    reactjs,
+    nodejs,
   } from "../assets";
   
   export const navLinks = [
@@ -36,15 +38,15 @@ import {
   const services = [
     {
       title: "Web Developer",
-      icon: web,
+      icon: html, // HTML5 icon
     },
     {
       title: "React Developer",
-      icon: mobile,
+      icon: reactjs, // React icon
     },
     {
-      title: "Backend Developer",
-      icon: backend,
+      title: "Node.js Developer",
+      icon: nodejs, // Node.js icon
     },
   ];
   
