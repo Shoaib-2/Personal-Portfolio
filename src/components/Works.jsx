@@ -5,10 +5,12 @@ import { SectionWrapper } from "../HigherOrderComponent";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+
 const ProjectCard = ({index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div 
-      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      variants={isMobile ? undefined : fadeIn("up", "spring", index * 0.5, 0.75)}
       className="relative bg-white/10 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl p-0 sm:w-[360px] w-full transition-transform duration-300 hover:scale-[1.025] hover:border-primary/60 group"
     >
       <div className="relative w-full h-[230px] overflow-hidden rounded-t-2xl">
@@ -48,12 +50,12 @@ const ProjectCard = ({index, name, description, tags, image, source_code_link })
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={isMobile ? undefined : textVariant()}>
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
       <div className="w-full flex-col md:flex-row xl:flex-row xl:items-center xl:justify-center">
-        <motion.p variants={fadeIn("", "", 0.1, 1)}
+        <motion.p variants={isMobile ? undefined : fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[16px] md:text-[17px] max-w-3xl leading-[28px] md:leading-[30px] px-2 md:px-0 xl:px-0 text-left"
         >
           Following projects showcases my skills and experience through
@@ -63,12 +65,12 @@ const Works = () => {
           and manage projects effectively.
         </motion.p>
       </div>
-      <div className="mt-20 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-7 px-2 md:px-4 xl:px-0">
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-7 px-2 md:px-4 xl:px-0">
         {projects.map((project, index) => (
           <ProjectCard 
-          key={`project-${index}`}
-          index={index}
-          {...project}
+            key={`project-${index}`}
+            index={index}
+            {...project}
           />
         ))}
       </div>
