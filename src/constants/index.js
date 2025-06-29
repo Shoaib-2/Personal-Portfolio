@@ -1,7 +1,4 @@
 import {
-    mobile,
-    backend,
-    web,
     radicalX,
     portfolio,
     sorting,
@@ -114,7 +111,7 @@ import {
         },
       ],
       image: portfolio,
-      source_code_link: "https://github.com/Shoaib-2/Personal-Portfolio",
+      source_code_link: "https://shoaib3-dportfolio.netlify.app/",
     },
     {
       name: "Sorting Visualization",
@@ -138,83 +135,6 @@ import {
       source_code_link: "https://github.com/Shoaib-2/Sorting-Visualization",
     },
     {
-      name: "The Brandling Villa",
-      description:
-        "A pub restaurant website for a client. This is a static version with limited number of features, yet scalable for future usage. This was a Volunteered project, when I started web development.",
-      tags: [
-        {
-          name: "React",
-          color: "green-text-gradient",
-        },
-        {
-          name: "HTML",
-          color: "green-text-gradient",
-        },
-        {
-          name: "CSS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: VolunteerVilla,
-      source_code_link: "https://villa-restaurant.vercel.app/",
-    },
-
-    {
-      name: "Roar",
-      description:
-        "Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community. As a learning experience, this was one of the toughest project.",
-      tags: [
-        {
-          name: "React Native",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Expo",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Nativewind",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Animatable",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Appwrite",
-          color: "blue-text-gradient",
-        },
-      ],
-      image: reactNative,
-      source_code_link: "https://github.com/Shoaib-2/Roar-react-native-",
-    },
-
-    {
-      name: "The SEO Sidekick",
-      description:
-        "This project is a comprehensive SEO analysis tool that helps users analyze and optimize their website's SEO performance. It includes features such as keyword tracking, SEO analysis, and export options for generating reports.",
-      tags: [
-        {
-          name: "React",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Node.js",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "TailwindCSS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "MongoDB",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: seoTool,
-      source_code_link: "https://github.com/Shoaib-2/SeoTool",
-    },
-     {
       name: "SendStream",
       description:
         "SendStream is a SaaS platform I built to automate, schedule, and analyze email campaigns with seamless Mailchimp integration. In beta, it has processed 1,000+ newsletters and managed over 10,000 subscribers for early users. Built with Next.js and Node.js, it delivers real-time analytics, secure flows, and a modern, user-friendly experience.",
@@ -246,6 +166,81 @@ import {
       ],
       image: SendStream,
       source_code_link: "https://client-3ye4.onrender.com/",
+    },
+    {
+      name: "The SEO Sidekick",
+      description:
+        "This project is a comprehensive SEO analysis tool that helps users analyze and optimize their website's SEO performance. It includes features such as keyword tracking, SEO analysis, and export options for generating reports.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Node.js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TailwindCSS",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MongoDB",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: seoTool,
+      source_code_link: "https://github.com/Shoaib-2/SeoTool",
+    },
+    {
+      name: "The Brandling Villa",
+      description:
+        "A pub restaurant website for a client. This is a static version with limited number of features, yet scalable for future usage. This was a Volunteered project, when I started web development.",
+      tags: [
+        {
+          name: "React",
+          color: "green-text-gradient",
+        },
+        {
+          name: "HTML",
+          color: "green-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: VolunteerVilla,
+      source_code_link: "https://villa-restaurant.vercel.app/",
+    },
+    {
+      name: "Roar",
+      description:
+        "Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community. As a learning experience, this was one of the toughest project.",
+      tags: [
+        {
+          name: "React Native",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Expo",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Nativewind",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Animatable",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Appwrite",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: reactNative,
+      source_code_link: "https://github.com/Shoaib-2/Roar-react-native-",
     },
   ];
   

@@ -1,4 +1,3 @@
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { github } from "../assets";
@@ -8,48 +7,40 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt 
-      options={{
-        max: 45,
-        scale: 1,
-        speed: 450,
-      }}
-      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img 
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-            loading="lazy"
-            decoding="async"
-            onError={e => { e.target.onerror = null; e.target.src = require('../assets/placeholder.png'); }}
-          />
-
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div 
-            onClick={() => window.open (source_code_link, "_blank")}
-            className="black-gradient w-10 h-10 rounded-full 
-            flex justify-center 
-            items-center cursor-pointer"
-            >
-              <img src={github} alt="github" className="w-1/2 h-1/2 object-contain"/>
-            </div>
-          </div>
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
-        <div className="mt-4 flex flex-wrap gap-2">
+    <motion.div 
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="relative bg-white/10 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl p-0 sm:w-[360px] w-full transition-transform duration-300 hover:scale-[1.025] hover:border-primary/60 group"
+    >
+      <div className="relative w-full h-[230px] overflow-hidden rounded-t-2xl">
+        <img 
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover rounded-t-2xl group-hover:scale-105 group-hover:brightness-110 transition-transform duration-300"
+          decoding="async"
+          width="360"
+          height="230"
+          onError={e => { e.target.onerror = null; e.target.src = require('../assets/placeholder.png'); }}
+        />
+        <button 
+          onClick={() => window.open(source_code_link, "_blank")}
+          className="absolute top-4 right-4 bg-black/70 hover:bg-primary/80 transition-colors w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
+          aria-label="View Source Code"
+        >
+          <img src={github} alt="github" className="w-5 h-5 object-contain"/>
+        </button>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none rounded-t-2xl" />
+      </div>
+      <div className="p-5 flex flex-col gap-2">
+        <h3 className="text-white font-bold text-[22px] mb-1 leading-tight">{name}</h3>
+        <p className="text-secondary text-[14px] leading-[22px] mb-2">{description}</p>
+        <div className="flex flex-wrap gap-2 mt-2">
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            <span key={tag.name} className={`px-2 py-1 rounded-full text-[13px] font-medium bg-white/10 border border-white/10 text-white ${tag.color}`}>
               #{tag.name}
-            </p>
+            </span>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   )
 }
