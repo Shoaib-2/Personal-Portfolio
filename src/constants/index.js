@@ -116,7 +116,7 @@ import {
     {
       name: "Sort Your Life with Algo",
       description:
-        "The overall aim of the project is to design and implement a web-based system to support lecturers and students on an algorithm design course, via a user-friendly interface and visualisation. The project is implemented using HTML, CSS, and JavaScript.",
+        "  The Modern Sorting Tool is a responsive, web-based application built with React and Tailwind CSS that brings sorting algorithms to life. It allows users to visualize classic algorithms like Bubble Sort, Merge Sort, and more, with controls for interaction. The tool also includes a search feature and displays the time complexity of each algorithm, making it a great educational resource.",
       tags: [
         {
           name: "HTML",
