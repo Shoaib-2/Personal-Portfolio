@@ -114,7 +114,7 @@ import {
       source_code_link: "https://shoaib3-dportfolio.netlify.app/",
     },
     {
-      name: "Sorting Visualization",
+      name: "Sort Your Life with Algo",
       description:
         "The overall aim of the project is to design and implement a web-based system to support lecturers and students on an algorithm design course, via a user-friendly interface and visualisation. The project is implemented using HTML, CSS, and JavaScript.",
       tags: [
@@ -132,7 +132,7 @@ import {
         },
       ],
       image: sorting,
-      source_code_link: "https://github.com/Shoaib-2/Sorting-Visualization",
+      source_code_link: "https://sort-yourlife-with-algo.vercel.app/",
     },
     {
       name: "SendStream",

@@ -25,7 +25,7 @@ import radicalX from "./company/RadicalX.png";
 import brandlingVilla from "./company/BrandingLogo.png";
 import outlierLogo from "./company/outlierLogo.png";
 import portfolio from "./3dportfolio.webp";
-import sorting from "./visualsorting.webp";
+import sorting from "./ModernSortTool.webp";
 import chatMessenger from "./gptai_demo.png";
 import VolunteerVilla from "./brandlingVilla.webp";
 import reactNative from "./reactNative.webp";
