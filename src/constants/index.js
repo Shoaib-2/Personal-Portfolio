@@ -6,7 +6,7 @@ import {
     outlierLogo,
     VolunteerVilla,
     reactNative,
-    seoTool,
+    rankforge,
     SendStream,
     html,
     reactjs,
@@ -168,9 +168,9 @@ import {
       source_code_link: "https://client-3ye4.onrender.com/",
     },
     {
-      name: "The SEO Sidekick",
+      name: "RankForge",
       description:
-        "This project is a comprehensive SEO analysis tool that helps users analyze and optimize their website's SEO performance. It includes features such as keyword tracking, SEO analysis, and export options for generating reports.",
+        "RankForge is a comprehensive, full-stack SEO analysis and optimization platform. It empowers users to analyze website SEO, track keyword rankings, and generate actionable AI-powered insights and reports. Built with React, Node.js, Tailwind CSS, and MongoDB, RankForge is designed for modern web performance and security.",
       tags: [
         {
           name: "React",
@@ -189,8 +189,8 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: seoTool,
-      source_code_link: "https://github.com/Shoaib-2/SeoTool",
+      image: rankforge,
+      source_code_link: "https://seo-rankforge.vercel.app/",
     },
     {
       name: "The Brandling Villa",
@@ -213,35 +213,35 @@ import {
       image: VolunteerVilla,
       source_code_link: "https://villa-restaurant.vercel.app/",
     },
-    {
-      name: "Roar",
-      description:
-        "Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community. As a learning experience, this was one of the toughest project.",
-      tags: [
-        {
-          name: "React Native",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Expo",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Nativewind",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Animatable",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Appwrite",
-          color: "blue-text-gradient",
-        },
-      ],
-      image: reactNative,
-      source_code_link: "https://github.com/Shoaib-2/Roar-react-native-",
-    },
+    // {
+    //   name: "Roar",
+    //   description:
+    //     "Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community. As a learning experience, this was one of the toughest project.",
+    //   tags: [
+    //     {
+    //       name: "React Native",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "Expo",
+    //       color: "pink-text-gradient",
+    //     },
+    //     {
+    //       name: "Nativewind",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "Animatable",
+    //       color: "pink-text-gradient",
+    //     },
+    //     {
+    //       name: "Appwrite",
+    //       color: "blue-text-gradient",
+    //     },
+    //   ],
+    //   image: reactNative,
+    //   source_code_link: "https://github.com/Shoaib-2/Roar-react-native-",
+    // },
   ];
   
   

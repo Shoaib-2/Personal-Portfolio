@@ -29,7 +29,7 @@ import sorting from "./ModernSortTool.webp";
 import chatMessenger from "./gptai_demo.png";
 import VolunteerVilla from "./brandlingVilla.webp";
 import reactNative from "./reactNative.webp";
-import seoTool from "./seoTool.webp";
+import rankforge from "./rankforge.webp";
 import SendStream from "./SendStream.webp";
 
 export {
@@ -62,6 +62,6 @@ export {
   chatMessenger,
   VolunteerVilla,
   reactNative,
-  seoTool,
+  rankforge,
   SendStream
 };
