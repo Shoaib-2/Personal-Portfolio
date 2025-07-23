@@ -92,48 +92,33 @@ import {
   
   
   const projects = [
-    {
-      name: "3D Porfolio",
+
+     {
+      name: "RankForge",
       description:
-        "My personal portfolio stands as a testament to my expertise and capabilities in the realm of web development. Leveraging a robust tech stack comprising React, Three.js, and Tailwind CSS, I showcase a seamless fusion of creativity and technical proficiency.",
+        "RankForge is a comprehensive, full-stack SEO analysis and optimization platform. It empowers users to analyze website SEO, track keyword rankings, and generate actionable AI-powered insights and reports. Built with React, Node.js, Tailwind CSS, and MongoDB, RankForge is designed for modern web performance and security.",
       tags: [
         {
           name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "ThreeJS",
-          color: "green-text-gradient",
+          name: "Node.js",
+          color: "pink-text-gradient",
         },
         {
           name: "TailwindCSS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: portfolio,
-      source_code_link: "https://shoaib3-dportfolio.netlify.app/",
-    },
-    {
-      name: "Sort Your Life with Algo",
-      description:
-        "  The Modern Sorting Tool is a responsive, web-based application built with React and Tailwind CSS that brings sorting algorithms to life. It allows users to visualize classic algorithms like Bubble Sort, Merge Sort, and more, with controls for interaction. The tool also includes a search feature and displays the time complexity of each algorithm, making it a great educational resource.",
-      tags: [
-        {
-          name: "HTML",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "CSS",
           color: "green-text-gradient",
         },
         {
-          name: "JavaScript",
+          name: "MongoDB",
           color: "pink-text-gradient",
         },
       ],
-      image: sorting,
-      source_code_link: "https://sort-yourlife-with-algo.vercel.app/",
+      image: rankforge,
+      source_code_link: "https://seo-rankforge.vercel.app/",
     },
+
     {
       name: "SendStream",
       description:
@@ -167,31 +152,51 @@ import {
       image: SendStream,
       source_code_link: "https://client-3ye4.onrender.com/",
     },
-    {
-      name: "RankForge",
+
+     {
+      name: "Sort Your Life with Algo",
       description:
-        "RankForge is a comprehensive, full-stack SEO analysis and optimization platform. It empowers users to analyze website SEO, track keyword rankings, and generate actionable AI-powered insights and reports. Built with React, Node.js, Tailwind CSS, and MongoDB, RankForge is designed for modern web performance and security.",
+        "  The Modern Sorting Tool is a responsive, web-based application built with React and Tailwind CSS that brings sorting algorithms to life. It allows users to visualize classic algorithms like Bubble Sort, Merge Sort, and more, with controls for interaction. The tool also includes a search feature and displays the time complexity of each algorithm, making it a great educational resource.",
+      tags: [
+        {
+          name: "HTML",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "green-text-gradient",
+        },
+        {
+          name: "JavaScript",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: sorting,
+      source_code_link: "https://sort-yourlife-with-algo.vercel.app/",
+    },
+
+    {
+      name: "3D Porfolio",
+      description:
+        "My personal portfolio stands as a testament to my expertise and capabilities in the realm of web development. Leveraging a robust tech stack comprising React, Three.js, and Tailwind CSS, I showcase a seamless fusion of creativity and technical proficiency.",
       tags: [
         {
           name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "Node.js",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "TailwindCSS",
+          name: "ThreeJS",
           color: "green-text-gradient",
         },
         {
-          name: "MongoDB",
+          name: "TailwindCSS",
           color: "pink-text-gradient",
         },
       ],
-      image: rankforge,
-      source_code_link: "https://seo-rankforge.vercel.app/",
+      image: portfolio,
+      source_code_link: "https://shoaib3-dportfolio.netlify.app/",
     },
+   
     {
       name: "The Brandling Villa",
       description:
