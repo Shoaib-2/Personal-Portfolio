@@ -36,10 +36,8 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        High-impact Frontend Developer with 1.5 years of experience, proven ability to design and deploy fast, accessible, and
-        scalable web applications using React, Next.js, Node.js, and TypeScript. Adept at driving UI performance, reducing load
-        times, and enhancing user engagement across production-level environments. Skilled in REST API integration, cross
-        functional collaboration, and Agile workflows. Committed to delivering measurable product outcomes, not just writing code.
+        I'm a frontend developer with 1.5 years of hands-on experience building fast, accessible, and user-focused web apps using React, Next.js, TypeScript, and Node.js. I’ve worked on real products where I improved performance, cut load times, and helped boost engagement—whether it was speeding up an AI chat app, redesigning a local venue’s website, or launching tools powered by Google Gemini.
+        I'm comfortable across the full stack, but I'm most at home crafting clean, responsive UIs and working closely with teams to ship features that actually make a difference. I care about writing maintainable code, but more than that, I care about whether what I'm building is useful and impactful.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (
