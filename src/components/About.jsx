@@ -1,51 +1,106 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import {styles} from '../style'
-import {services} from '../constants'
-import {fadeIn, textVariant} from '../utils/motion'
-import { SectionWrapper } from '../HigherOrderComponent'
-import ParticleBG from './ParticleBG'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { services } from '../constants';
+import { motionVariants } from '../design-system';
 
-const ServiceCard = ({index, title, icon}) => {
+const ServiceCard = ({ index, title, icon, description }) => {
   return (
-    <motion.div variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-      className='relative xs:w-[250px] w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'>
-      <div className='bg-black rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col overflow-hidden'>
-        <ParticleBG />
-        <div className="relative flex items-center justify-center mb-2 z-10">
-          <img 
-            src={icon} 
-            alt="title" 
-            className="w-16 h-16 object-contain z-10 relative" 
-          />
+    <motion.div
+      variants={motionVariants.item}
+      className="group relative bg-background-card/30 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-700 overflow-hidden h-full"
+      whileHover={{ y: -8 }}
+    >
+      {/* Mesh gradient background */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-accent-primary/10 via-transparent to-accent-secondary/10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)] group-hover:animate-spin-slow" />
+      </div>
+      
+      {/* Ambient glow */}
+      <div className="absolute -inset-[1px] bg-gradient-to-br from-accent-primary/20 via-accent-secondary/20 to-accent-primary/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-all duration-700" />
+      
+      <div className="relative z-10 flex flex-col h-full">
+        {/* Icon with 3D effect */}
+        <div className="mb-6">
+          <div className="relative inline-flex">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-primary to-accent-secondary rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity" />
+            <div className="relative w-16 h-16 rounded-2xl bg-gradient-to-br from-background-tertiary to-background-hover flex items-center justify-center border border-white/10 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+              <span className="text-4xl transform group-hover:scale-110 transition-transform">{icon}</span>
+            </div>
+          </div>
         </div>
-        <h3 className='text-white text-[20px] font-bold text-center z-10 relative'>{title}</h3>
+        
+        {/* Content */}
+        <div className="flex-1 flex flex-col">
+          <h3 className="text-text-primary text-xl font-bold mb-3 group-hover:text-accent-primary transition-colors duration-300">
+            {title}
+          </h3>
+          <p className="text-text-muted text-sm leading-relaxed">
+            {description}
+          </p>
+        </div>
+        
+        {/* Animated corner accent */}
+        <div className="absolute top-4 right-4 w-20 h-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="absolute top-0 right-0 w-8 h-[2px] bg-gradient-to-l from-accent-primary to-transparent" />
+          <div className="absolute top-0 right-0 w-[2px] h-8 bg-gradient-to-b from-accent-primary to-transparent" />
+        </div>
+        
+        {/* Bottom glow line */}
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
 const About = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+    <section id="about" className="w-full py-12 md:py-20">
+      <div className="section-container mx-auto">
+      <motion.div
+        variants={motionVariants.fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
-        I'm a frontend developer with 1.5 years of hands-on experience building fast, accessible, and user-focused web apps using React, Next.js, TypeScript, and Node.js. I’ve worked on real products where I improved performance, cut load times, and helped boost engagement—whether it was speeding up an AI chat app, redesigning a local venue’s website, or launching tools powered by Google Gemini.
-        I'm comfortable across the full stack, but I'm most at home crafting clean, responsive UIs and working closely with teams to ship features that actually make a difference. I care about writing maintainable code, but more than that, I care about whether what I'm building is useful and impactful.
-      </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
-    </>
-  )
-}
+        <p className="text-accent-primary text-sm md:text-base font-semibold uppercase tracking-wider mb-2 text-left">
+          Introduction
+        </p>
+        <h2 className="text-responsive-h2 font-black text-text-primary mb-8 text-left">
+          Overview
+        </h2>
+      </motion.div>
 
-export default SectionWrapper(About, "about")
+      <motion.p
+        variants={motionVariants.fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="mt-4 text-text-secondary text-base md:text-lg max-w-3xl leading-relaxed text-left"
+      >
+        I am an frontend Engineer with 2 years of hands-on experience building fast, accessible, and user-focused web apps using React, Next.js, TypeScript, and Node.js. I have worked on real products where I improved performance, cut load times, and helped boost engagement whether it was speeding up an AI chat app, redesigning a local venue website, or launching tools powered by Google Gemini, OpenAI, you name it. I am comfortable across the full stack, but I am most at home crafting clean, responsive UIs and working closely with teams to ship features that actually make a difference. I care about writing maintainable code, but more than that, I care about whether what I am building is useful and impactful.
+      </motion.p>
+
+      <motion.div
+        variants={motionVariants.staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {services.map((service, index) => (
+          <ServiceCard 
+            key={service.title} 
+            index={index} 
+            title={service.title}
+            icon={service.icon}
+            description={service.description}
+          />
+        ))}
+      </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default About;

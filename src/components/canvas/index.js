@@ -1,4 +1,6 @@
-import EarthCanvas from "./Earth";
-import StarsCanvas from "./Stars";
+// Canvas exports - keeping for compatibility
+// Old Earth and Stars canvases removed
 
-export { EarthCanvas,StarsCanvas };
+export const EarthCanvas = () => null;
+export const StarsCanvas = () => null;
+

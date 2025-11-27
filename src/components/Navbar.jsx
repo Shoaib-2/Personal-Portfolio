@@ -1,133 +1,202 @@
-//All the imports for the navbar component.
-import React, {useState} from 'react'
-import {navLinks} from '../constants'
-import { logo, menu, close, github } from '../assets'
-import resume_shoaib_mohammed from '../assets/pdf/resume_shoaib_mohammed.pdf'
-
-
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { navLinks } from '../constants';
+import { logo, menu, close, github } from '../assets';
+import Shoaib_Mohammed_Resume from '../assets/pdf/Shoaib_Mohammed_Resume.pdf';
 
 const Navbar = ({ setNavOpen }) => {
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Sync navOpen state with toggle
-  React.useEffect(() => {
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
     setNavOpen && setNavOpen(toggle);
   }, [toggle, setNavOpen]);
 
   return (
-    <nav className="w-full fixed top-0 z-30 bg-primary/70 backdrop-blur-lg shadow-lg rounded-b-2xl border-b border-white/10">
+    <nav className={`w-full fixed top-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? 'bg-background-card/95 backdrop-blur-lg shadow-card border-b border-border' 
+        : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2" onClick={() => {
-          setActive("");
-          window.scrollTo(0, 0);
-        }}>
-          <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
-          <span className="text-white text-xl font-bold tracking-wide">Shoaib <span className="hidden sm:inline font-normal opacity-70">| Portfolio</span></span>
-        </a>
+        <motion.a 
+          href="/" 
+          className="flex items-center gap-3 group"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.2 }}
+        >
+          <div className="w-10 h-10 rounded-full bg-gradient-primary flex items-center justify-center">
+            <span className="text-background-primary font-black text-xl">S</span>
+          </div>
+          <span className="text-text-primary text-xl font-bold tracking-wide">
+            Shoaib <span className="hidden sm:inline font-normal text-text-secondary">Mohammed</span>
+          </span>
+        </motion.a>
+
         {/* Desktop Nav */}
-        <ul className="hidden md:flex gap-6 items-center bg-black-100/60 px-6 py-2 rounded-full shadow-md">
+        <ul className="hidden lg:flex gap-2 items-center">
           {navLinks.map((link) => (
-            <li
+            <motion.li
               key={link.id}
-              className={`transition-all px-4 py-1 rounded-full cursor-pointer font-medium text-[16px] ${
+              className={`px-4 py-2 rounded-lg cursor-pointer font-medium text-base transition-all ${
                 active === link.title
-                  ? 'bg-primary text-white shadow-lg'
-                  : 'text-secondary hover:bg-primary/30 hover:text-white'
-              } hover:scale-110`}
+                  ? 'bg-accent-primary text-white'
+                  : 'text-text-secondary hover:text-text-primary hover:bg-background-hover'
+              }`}
               onClick={() => setActive(link.title)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <a
-                href={`#${link.id.toLowerCase()}`}
-              >
-                {link.title}
-              </a>
-            </li>
+              <a href={`#${link.id.toLowerCase()}`}>{link.title}</a>
+            </motion.li>
           ))}
+          
           {/* Socials */}
-          <li className="flex gap-3 ml-4">
-            <a href="https://github.com/Shoaib-2" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-              <img src={github} alt="GitHub" className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/in/mohammed-shoaib-dev/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-              <svg className="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
-            </a>
-          </li>
+          <div className="flex gap-3 ml-4 pl-4 border-l border-border">
+            <motion.a 
+              href="https://github.com/Shoaib-2" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-background-hover flex items-center justify-center hover:bg-accent-primary hover:shadow-glow-blue transition-all"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <img src={github} alt="GitHub" className="w-5 h-5" />
+            </motion.a>
+            <motion.a 
+              href="https://www.linkedin.com/in/mohammed-shoaib-dev/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-9 h-9 rounded-full bg-background-hover flex items-center justify-center hover:bg-accent-blue hover:shadow-glow-purple transition-all"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <svg className="w-5 h-5 fill-current text-text-primary" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </motion.a>
+          </div>
         </ul>
+
         {/* Resume Button Desktop */}
         <a
-          href={resume_shoaib_mohammed}
+          href={Shoaib_Mohammed_Resume}
           download="MohammedShoaibCV.pdf"
-          className="hidden md:inline-block ml-6 px-5 py-2 rounded-full bg-gradient-to-r from-primary to-black-100 text-white font-semibold shadow-md transition-transform hover:scale-110 hover:bg-gradient-to-r hover:from-primary hover:to-black-100"
+          className="hidden lg:inline-block btn-primary ml-6"
         >
           Download CV
         </a>
         {/* Mobile Hamburger */}
-        <button
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-black-100/60 shadow-md focus:outline-none"
-          aria-label="Toggle menu"
+        <motion.button
+          className="lg:hidden flex items-center justify-center w-11 h-11 rounded-full bg-background-hover hover:bg-accent-primary transition-colors"
           onClick={() => setToggle(!toggle)}
+          whileTap={{ scale: 0.9 }}
         >
-          <img src={toggle ? close : menu} alt="menu" className="w-7 h-7 object-contain" />
-        </button>
-        {/* Mobile Menu */}
-        <div
-          className={`fixed inset-0 z-40 bg-black/80 transition-all duration-300 ${toggle ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-          onClick={() => setToggle(false)}
-        ></div>
-        <div
-          className={`fixed top-0 right-0 h-full w-4/5 max-w-xs bg-black/90 shadow-2xl border-l border-white/10 z-50 p-8 flex flex-col gap-8 transform transition-transform duration-300 ${toggle ? 'translate-x-0' : 'translate-x-full'} backdrop-blur-xl'`}
-        >
-          <div className="flex justify-between items-center mb-6">
-            <span className="text-white text-xl font-bold">Menu</span>
-            <button onClick={() => setToggle(false)} aria-label="Close menu">
-              <img src={close} alt="close" className="w-7 h-7" />
-            </button>
-          </div>
-          <ul className="flex flex-col gap-6">
-            {navLinks.map((link) => (
-              <li
-                key={link.id}
-                className={`transition-all px-4 py-2 rounded-lg cursor-pointer font-medium text-lg ${
-                  active === link.title
-                    ? 'bg-primary text-white shadow-lg'
-                    : 'text-secondary hover:bg-primary/30 hover:text-white'
-                } hover:scale-110`}
-                onClick={() => {
-                  setToggle(false);
-                  setActive(link.title);
-                }}
+          <img src={toggle ? close : menu} alt="menu" className="w-6 h-6 object-contain" />
+        </motion.button>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {toggle && (
+            <>
+              <motion.div
+                className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm lg:hidden"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setToggle(false)}
+              />
+              <motion.div
+                className="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-background-card border-l border-border z-50 p-8 flex flex-col gap-8 lg:hidden shadow-2xl"
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               >
+                <div className="flex justify-between items-center mb-6">
+                  <span className="text-text-primary text-xl font-bold">Menu</span>
+                  <button onClick={() => setToggle(false)}>
+                    <img src={close} alt="close" className="w-7 h-7" />
+                  </button>
+                </div>
+                
+                <ul className="flex flex-col gap-4">
+                  {navLinks.map((link, index) => (
+                    <motion.li
+                      key={link.id}
+                      className={`px-4 py-3 rounded-lg cursor-pointer font-medium text-lg transition-all ${
+                        active === link.title
+                          ? 'bg-accent-primary text-white'
+                          : 'text-text-secondary hover:bg-background-hover hover:text-text-primary'
+                      }`}
+                      onClick={() => {
+                        setToggle(false);
+                        setActive(link.title);
+                      }}
+                      initial={{ x: 50, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ delay: index * 0.1 }}
+                    >
+                      <a href={`#${link.id.toLowerCase()}`}>{link.title}</a>
+                    </motion.li>
+                  ))}
+                </ul>
+
+                {/* Socials for mobile */}
+                <div className="flex gap-4 mt-8 justify-center">
+                  <motion.a 
+                    href="https://github.com/Shoaib-2" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-background-hover flex items-center justify-center hover:bg-accent-primary transition-all"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <img src={github} alt="GitHub" className="w-6 h-6" />
+                  </motion.a>
+                  <motion.a 
+                    href="https://www.linkedin.com/in/mohammed-shoaib-dev/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-background-hover flex items-center justify-center hover:bg-accent-blue transition-all"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <svg className="w-6 h-6 fill-current text-text-primary" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </motion.a>
+                </div>
+
                 <a
-                  href={`#${link.id.toLowerCase()}`}
+                  href={Shoaib_Mohammed_Resume}
+                  download="MohammedShoaibCV.pdf"
+                  className="btn-primary mt-auto text-center"
+                  onClick={() => setToggle(false)}
                 >
-                  {link.title}
+                  Download CV
                 </a>
-              </li>
-            ))}
-            {/* Socials for mobile */}
-            <li className="flex gap-4 mt-8 justify-center">
-              <a href="https://github.com/Shoaib-2" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                <img src={github} alt="GitHub" className="w-7 h-7" />
-              </a>
-              <a href="https://www.linkedin.com/in/mohammed-shoaib-dev/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-                <svg className="w-7 h-7 fill-white" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm15.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.59z"/></svg>
-              </a>
-            </li>
-          </ul>
-          <a
-            href={resume_shoaib_mohammed}
-            download="MohammedShoaibCV.pdf"
-            className="mt-8 px-5 py-3 rounded-full bg-gradient-to-r from-primary to-black-100 text-white font-semibold shadow-md text-center transition-transform hover:scale-110 hover:bg-gradient-to-r hover:from-primary hover:to-black-100"
-            onClick={() => setToggle(false)}
-          >
-            Download CV
-          </a>
-        </div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

@@ -9,44 +9,63 @@ import {
     rankforge,
     SendStream,
     CuraLink,
-    html,
-    reactjs,
-    nodejs,
   } from "../assets";
   
-  export const navLinks = [
-    {
-      id: "about",
-      title: "About",
-    },
-    {
-      id: "work",
-      title: "Work",
-    },
-    {
-      id: "contact",
-      title: "Contact",
-    },
-    {
-      id: "Projects",
-      title: "Projects",
-    },
-  ];
-  
-  const services = [
-    {
-      title: "Web Developer",
-      icon: html, // HTML5 icon
-    },
-    {
-      title: "React Developer",
-      icon: reactjs, // React icon
-    },
-    {
-      title: "Node.js Developer",
-      icon: nodejs, // Node.js icon
-    },
-  ];
+export const navLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "work",
+    title: "Work",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "certifications",
+    title: "Certifications",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+
+const services = [
+  {
+    title: "React & Next.js",
+    icon: "⚛️",
+    description: "Building modern web applications",
+  },
+  {
+    title: "Node.js",
+    icon: "🟢",
+    description: "Backend development and APIs",
+  },
+  {
+    title: "TypeScript",
+    icon: "💠",
+    description: "Type-safe code for reliability",
+  },
+  {
+    title: "MongoDB",
+    icon: "🍃",
+    description: "NoSQL database solutions",
+  },
+  {
+    title: "PostgreSQL",
+    icon: "🐘",
+    description: "Relational database management",
+  },
+  {
+    title: "Docker & Git",
+    icon: "🐳",
+    description: "DevOps and version control",
+  },
+];
   
   const experiences = [
       // Outlier

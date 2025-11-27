@@ -1,81 +1,107 @@
-import { motion } from "framer-motion";
-import { styles } from "../style";
-import { github } from "../assets";
-import { SectionWrapper } from "../HigherOrderComponent";
-import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { projects } from '../constants';
+import { motionVariants } from '../design-system';
+import { github } from '../assets';
 
-const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+const ProjectCard = ({ project, index }) => {
+  const { name, description, tags, image, source_code_link } = project;
 
-const ProjectCard = ({index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div 
-      variants={isMobile ? undefined : fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="relative bg-white/10 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl p-0 sm:w-[360px] w-full transition-transform duration-300 hover:scale-[1.025] hover:border-primary/60 group"
+    <motion.div
+      variants={motionVariants.item}
+      className="group relative bg-background-card rounded-2xl border border-border hover:border-accent-primary transition-all duration-300 overflow-hidden card-hover"
     >
-      <div className="relative w-full h-[230px] overflow-hidden rounded-t-2xl">
-        <img 
+      {/* Project Image */}
+      <div className="relative h-56 overflow-hidden">
+        <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover rounded-t-2xl group-hover:scale-105 group-hover:brightness-110 transition-transform duration-300"
-          decoding="async"
-          width="360"
-          height="230"
-          onError={e => { e.target.onerror = null; e.target.src = require('../assets/placeholder.png'); }}
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
-        <button 
-          onClick={() => window.open(source_code_link, "_blank")}
-          className="absolute top-4 right-4 bg-black/70 hover:bg-primary/80 transition-colors w-10 h-10 rounded-full flex items-center justify-center shadow-lg z-10"
-          aria-label="View Source Code"
+        <div className="absolute inset-0 bg-gradient-to-t from-background-primary via-transparent to-transparent opacity-60" />
+        
+        {/* View Project Button */}
+        <button
+          onClick={() => window.open(source_code_link, '_blank')}
+          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-background-card/90 backdrop-blur-sm flex items-center justify-center hover:bg-accent-primary hover:scale-110 transition-all duration-300 group/btn"
         >
-          <img src={github} alt="github" className="w-5 h-5 object-contain"/>
+          <img src={github} alt="view" className="w-5 h-5 group-hover/btn:scale-110 transition-transform" />
         </button>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none rounded-t-2xl" />
       </div>
-      <div className="p-5 flex flex-col gap-2">
-        <h3 className="text-white font-bold text-[22px] mb-1 leading-tight">{name}</h3>
-        <p className="text-secondary text-[14px] leading-[22px] mb-2">{description}</p>
-        <div className="flex flex-wrap gap-2 mt-2">
+
+      {/* Project Info */}
+      <div className="p-6">
+        <h3 className="text-text-primary text-xl font-bold mb-3 group-hover:text-accent-primary transition-colors">
+          {name}
+        </h3>
+        <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
+          {description}
+        </p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span key={tag.name} className={`px-2 py-1 rounded-full text-[13px] font-medium bg-white/10 border border-white/10 text-white ${tag.color}`}>
+            <span
+              key={tag.name}
+              className="px-3 py-1 text-xs font-medium rounded-full bg-background-hover text-text-secondary border border-border hover:border-accent-primary transition-colors"
+            >
               #{tag.name}
             </span>
           ))}
         </div>
       </div>
-    </motion.div>
-  )
-}
 
-const Works = () => {
-  return (
-    <>
-      <motion.div variants={isMobile ? undefined : textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
-      </motion.div>
-      <div className="w-full flex-col md:flex-row xl:flex-row xl:items-center xl:justify-center">
-        <motion.p variants={isMobile ? undefined : fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[16px] md:text-[17px] max-w-3xl leading-[28px] md:leading-[30px] px-2 md:px-0 xl:px-0 text-left"
-        >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </motion.p>
+      {/* Hover glow effect */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-primary opacity-5" />
       </div>
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-7 px-2 md:px-4 xl:px-0">
-        {projects.map((project, index) => (
-          <ProjectCard 
-            key={`project-${index}`}
-            index={index}
-            {...project}
-          />
-        ))}
-      </div>
-    </>
+    </motion.div>
   );
 };
 
-export default SectionWrapper(Works, "projects");
+const Works = () => {
+  return (
+    <section id="projects" className="w-full py-12 md:py-20">
+      <div className="section-container mx-auto">
+      <motion.div
+        variants={motionVariants.fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <p className="text-accent-primary text-sm md:text-base font-semibold uppercase tracking-wider mb-2 text-left">
+          My Work
+        </p>
+        <h2 className="text-responsive-h2 font-black text-text-primary mb-8 text-left">
+          Projects
+        </h2>
+      </motion.div>
+
+      <motion.p
+        variants={motionVariants.fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-text-secondary text-base md:text-lg max-w-3xl leading-relaxed mb-10 text-left"
+      >
+        These projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. They reflect my ability to solve complex problems, work with different technologies, and manage projects effectively.
+      </motion.p>
+
+      <motion.div
+        variants={motionVariants.staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {projects.map((project, index) => (
+          <ProjectCard key={`project-${index}`} project={project} index={index} />
+        ))}
+      </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Works;
