@@ -8,6 +8,7 @@ import {
     reactNative,
     rankforge,
     SendStream,
+    CuraLink,
     html,
     reactjs,
     nodejs,
@@ -92,6 +93,39 @@ import {
   
   
   const projects = [
+    {
+      name: "CuraLink",
+      description:
+        "An innovative full-stack application connecting patients with clinical trials, medical experts, and research publications. Built with Next.js, Express.js, TypeScript, and PostgreSQL, featuring Google Gemini AI for intelligent matching and content summarization. Integrates PubMed, ClinicalTrials.gov, and ORCID APIs with real-time chat, forums, and responsive design. Deployed on Render and Vercel.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Node.js",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "PostgreSQL",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "TailwindCSS",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Next.js",
+          color: "green-text-gradient",
+        },
+      ],
+      image: CuraLink,
+      source_code_link: "https://cura-link-hackathon-shoaib-mohammed.vercel.app/",
+    },
 
      {
       name: "RankForge",
@@ -150,7 +184,7 @@ import {
         },
       ],
       image: SendStream,
-      source_code_link: "https://client-3ye4.onrender.com/",
+      source_code_link: "https://send-stream.vercel.app/",
     },
 
      {

@@ -30,7 +30,8 @@ import chatMessenger from "./gptai_demo.png";
 import VolunteerVilla from "./brandlingVilla.webp";
 import reactNative from "./reactNative.webp";
 import rankforge from "./rankforge.webp";
-import SendStream from "./SendStream.webp";
+import SendStream from "./SendStream (1).webp";
+import CuraLink from "./CuraLink.webp";
 
 export {
   logo,
@@ -63,5 +64,6 @@ export {
   VolunteerVilla,
   reactNative,
   rankforge,
-  SendStream
+  SendStream,
+  CuraLink 
 };
