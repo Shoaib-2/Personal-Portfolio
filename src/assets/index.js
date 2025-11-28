@@ -17,6 +17,9 @@ import rankforge from "./rankforge.webp";
 import SendStream from "./SendStream (1).webp";
 import CuraLink from "./CuraLink.webp";
 
+// PDFs
+import HackathonCertificate from "./pdf/HackathonCertificate.pdf";
+
 export {
   logo,
   github,
@@ -31,7 +34,8 @@ export {
   reactNative,
   rankforge,
   SendStream,
-  CuraLink 
+  CuraLink,
+  HackathonCertificate
 };
 
 
