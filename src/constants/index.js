@@ -4,6 +4,7 @@ import {
     sorting,
     brandlingVilla,
     outlierLogo,
+    humanityFounders,
     VolunteerVilla,
     reactNative,
     rankforge,
@@ -68,44 +69,55 @@ const services = [
 ];
   
   const experiences = [
+      // Humanity Founders
+      {
+        title: "Full Stack Developer",
+        company_name: "Humanity Founders",
+        icon: humanityFounders,
+        iconBg: "#ffffff",
+        date: "Oct 2025 - Nov 2025",
+        points: [
+          "Architected a full-stack AI healthcare platform with role-based workflows, NLP search and AI-driven summarisation, delivering 95+ Lighthouse performance, <300ms API latency.",
+          "Optimised patient–trial matching and expert workflows, achieving 3–5x more relevant matches, 40% higher expert engagement, +56% faster publication review, and <2s end-to-end chat latency."
+        ],
+      },
+
       // Outlier
       {
         title: "AI Prompt Engineer",
         company_name: "Outlier",
         icon: outlierLogo,
         iconBg: "#ffffff",
-        date: "May 2024 - Present",
+        date: "May 2024 - Apr 2025",
         points: [
-          "Engineered and optimized prompt logic for NLP systems, increasing model response accuracy to 95%+ across 1,000+ edge cases.",
-          "Automated test pipelines using JavaScript and Python, improving release stability and regression tracking.",
-          "Collaborated cross-functionally with devs and data scientists to deploy scalable, real-time response systems."
+          "Engineered data-analysis scripts and prompt-validation frameworks using JavaScript and Python, testing 80+ edge cases and enhancing AI model reliability and coverage.",
+          "Developed automated testing and monitoring pipelines that increased model response stability by 70% and significantly reduced production regressions."
         ],
       },
 
      // Brandling Villa
      {
-      title: "Frontend Developer – Volunteer",
-      company_name: "Frank & Bird Ltd",
+      title: "Front-End Developer",
+      company_name: "The Brandling Villa",
       icon: brandlingVilla,
       iconBg: "#ffffff",
-      date: "February 2024 - March 2024",
+      date: "Feb 2024 - May 2024",
       points: [
-        "Delivered a fully responsive, mobile-first web interface using React and Tailwind CSS, meeting WCAG 2.1 standards.",
-        "Integrated dynamic API-driven content, cutting page load times by 30% and increasing booking conversion by 25%.",
-        "Partnered with stakeholders to redesign user flow, improving site engagement through streamlined UI interactions.",
+        "Rebuilt the website and booking UI using React, Next.js and Tailwind CSS, improving user flow and increasing online bookings by 25%.",
+        "Applied WCAG 2.1 accessibility standards and advanced performance techniques (code-splitting, lazy-loading, image optimisation), reducing page load time by 30% and improving overall site usability.",
       ],
     },
-    //RadicalX
+
+    // RadicalX
     {
       title: "Software Engineer Intern",
       company_name: "RadicalX AI",
       icon: radicalX,
       iconBg: "#ffffff",
-      date: "November 2023 - January 2024",
+      date: "Nov 2023 - Feb 2024",
       points: [
-        "Shipped production-ready components in React and TypeScript for a live AI chat platform, boosting user retention by 20%.",
-        "Reduced app latency by 35% through optimized rendering and caching strategies.",
-        "Contributed to Agile sprints, Git-based workflows, and code reviews in a remote, distributed team.",
+        "Delivered production-ready React + TypeScript components for a high-traffic AI chat platform, reducing latency by 35% through optimised rendering, caching strategies, and component-level performance tuning.",
+        "Collaborated in Agile sprints across PR reviews and iterative feature delivery, improving UI/UX retention metrics by enhancing responsiveness, usability, and crossflow consistency.",
       ],
     },
   ];

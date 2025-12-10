@@ -101,7 +101,7 @@ const Hero = () => {
 
           {/* Tagline with Typewriter Effect */}
           <motion.p
-            className="text-text-secondary text-xl sm:text-2xl md:text-3xl font-light max-w-3xl min-h-[5rem]"
+            className="text-text-secondary text-lg sm:text-xl md:text-2xl lg:text-3xl font-light max-w-3xl min-h-[4rem] sm:min-h-[5rem]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -121,20 +121,20 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-row items-center gap-6 mt-8"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 mt-8 w-full sm:w-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
             <a
               href="#projects"
-              className="btn-primary px-8 py-4 text-lg"
+              className="btn-primary px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg text-center"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="btn-outline px-8 py-4 text-lg"
+              className="btn-outline px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg text-center"
             >
               Get In Touch
             </a>

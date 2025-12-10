@@ -9,15 +9,15 @@ const Notification = ({ message, type, onClose }) => (
     initial={{ opacity: 0, y: -20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
-    className={`fixed z-50 top-24 right-6 px-6 py-4 rounded-xl shadow-lg ${
+    className={`fixed z-50 top-20 sm:top-24 left-4 right-4 sm:left-auto sm:right-6 px-4 sm:px-6 py-3 sm:py-4 rounded-xl shadow-lg max-w-sm sm:max-w-md mx-auto sm:mx-0 ${
       type === 'error' 
         ? 'bg-red-600 text-white' 
         : 'bg-accent-emerald text-white'
     }`}
   >
-    <div className="flex items-center justify-between gap-4">
-      <span className="font-medium">{message}</span>
-      <button onClick={onClose} className="text-xl font-bold hover:scale-110 transition-transform">
+    <div className="flex items-center justify-between gap-3 sm:gap-4">
+      <span className="font-medium text-sm sm:text-base">{message}</span>
+      <button onClick={onClose} className="text-xl font-bold hover:scale-110 transition-transform flex-shrink-0">
         &times;
       </button>
     </div>
@@ -148,7 +148,7 @@ const Contact = () => {
           >
             {/* Name Field */}
             <motion.div variants={motionVariants.item}>
-              <label className="block text-text-primary font-medium mb-2">
+              <label className="block text-text-primary font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                 Your Name
               </label>
               <input
@@ -157,7 +157,7 @@ const Contact = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="What is your name"
-                className="w-full px-4 py-4 bg-background-card border border-border rounded-xl text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/20 transition-all"
+                className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-background-card border border-border rounded-lg sm:rounded-xl text-text-primary text-sm sm:text-base placeholder:text-text-muted focus:border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/20 transition-all"
               />
               {errors.name && (
                 <p className="text-red-400 text-sm mt-1">{errors.name}</p>
@@ -166,7 +166,7 @@ const Contact = () => {
 
             {/* Email Field */}
             <motion.div variants={motionVariants.item}>
-              <label className="block text-text-primary font-medium mb-2">
+              <label className="block text-text-primary font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                 Your Email
               </label>
               <input
@@ -175,7 +175,7 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="What is your email"
-                className="w-full px-4 py-4 bg-background-card border border-border rounded-xl text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/20 transition-all"
+                className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-background-card border border-border rounded-lg sm:rounded-xl text-text-primary text-sm sm:text-base placeholder:text-text-muted focus:border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/20 transition-all"
               />
               {errors.email && (
                 <p className="text-red-400 text-sm mt-1">{errors.email}</p>
@@ -184,7 +184,7 @@ const Contact = () => {
 
             {/* Message Field */}
             <motion.div variants={motionVariants.item}>
-              <label className="block text-text-primary font-medium mb-2">
+              <label className="block text-text-primary font-medium mb-1.5 sm:mb-2 text-sm sm:text-base">
                 Your Message
               </label>
               <textarea
@@ -192,8 +192,8 @@ const Contact = () => {
                 value={form.message}
                 onChange={handleChange}
                 placeholder="What would you like to say"
-                rows="6"
-                className="w-full px-4 py-4 bg-background-card border border-border rounded-xl text-text-primary placeholder:text-text-muted focus:border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/20 transition-all resize-none"
+                rows="5"
+                className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-background-card border border-border rounded-lg sm:rounded-xl text-text-primary text-sm sm:text-base placeholder:text-text-muted focus:border-accent-primary focus:outline-none focus:ring-2 focus:ring-accent-primary/20 transition-all resize-none"
               />
               {errors.message && (
                 <p className="text-red-400 text-sm mt-1">{errors.message}</p>
@@ -205,7 +205,7 @@ const Contact = () => {
               variants={motionVariants.item}
               type="submit"
               disabled={loading}
-              className="btn-primary w-full md:w-auto px-12 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="btn-primary w-full sm:w-auto px-8 sm:px-12 py-3 sm:py-4 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Sending...' : 'Send Message'}
             </motion.button>

@@ -148,7 +148,23 @@
   .section-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .section-container {
+      padding: 0 1.5rem;
+    }
+  }
+  
+  /* Hide scrollbar utility */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
   
   /* Animated Underline */

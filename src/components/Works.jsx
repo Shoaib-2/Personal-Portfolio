@@ -13,7 +13,7 @@ const ProjectCard = ({ project, index }) => {
       className="group relative bg-background-card rounded-2xl border border-border hover:border-accent-primary transition-all duration-300 overflow-hidden card-hover"
     >
       {/* Project Image */}
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-44 sm:h-56 overflow-hidden">
         <img
           src={image}
           alt={name}
@@ -31,11 +31,11 @@ const ProjectCard = ({ project, index }) => {
       </div>
 
       {/* Project Info */}
-      <div className="p-6">
-        <h3 className="text-text-primary text-xl font-bold mb-3 group-hover:text-accent-primary transition-colors">
+      <div className="p-4 sm:p-6">
+        <h3 className="text-text-primary text-lg sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-accent-primary transition-colors">
           {name}
         </h3>
-        <p className="text-text-secondary text-sm leading-relaxed mb-4 line-clamp-3">
+        <p className="text-text-secondary text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-3">
           {description}
         </p>
 

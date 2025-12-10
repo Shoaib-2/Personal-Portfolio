@@ -12,10 +12,10 @@ const ExperienceCard = ({ experience }) => {
       transition={{ duration: 0.3 }}
       className="h-full"
     >
-      <div className="glass p-8 rounded-2xl h-full">
+      <div className="glass p-4 sm:p-6 md:p-8 rounded-2xl h-full">
         {/* Company Header */}
-        <div className="flex items-start gap-6 mb-8">
-          <div className="w-20 h-20 rounded-xl bg-background-hover flex items-center justify-center p-3 flex-shrink-0">
+        <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6 sm:mb-8">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-background-hover flex items-center justify-center p-2 sm:p-3 flex-shrink-0">
             <img
               src={experience.icon}
               alt={experience.company_name}
@@ -23,20 +23,20 @@ const ExperienceCard = ({ experience }) => {
             />
           </div>
           <div className="flex-1">
-            <h3 className="text-text-primary text-2xl font-bold mb-2">
+            <h3 className="text-text-primary text-xl sm:text-2xl font-bold mb-1 sm:mb-2">
               {experience.title}
             </h3>
-            <p className="text-accent-primary text-lg font-semibold mb-1">
+            <p className="text-accent-primary text-base sm:text-lg font-semibold mb-1">
               {experience.company_name}
             </p>
-            <p className="text-text-muted text-sm">
+            <p className="text-text-muted text-xs sm:text-sm">
               {experience.date}
             </p>
           </div>
         </div>
 
         {/* Responsibilities */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {experience.points.map((point, idx) => (
             <motion.div
               key={idx}
@@ -46,7 +46,7 @@ const ExperienceCard = ({ experience }) => {
               className="flex gap-3"
             >
               <div className="w-1.5 h-1.5 rounded-full bg-accent-primary mt-2 flex-shrink-0" />
-              <p className="text-text-secondary text-base leading-relaxed">
+              <p className="text-text-secondary text-sm sm:text-base leading-relaxed">
                 {point}
               </p>
             </motion.div>
@@ -79,12 +79,12 @@ const Experience = () => {
 
       <div className="max-w-6xl mx-auto">
         {/* Tabs Navigation */}
-        <div className="flex flex-wrap gap-3 mb-8 justify-start">
+        <div className="flex gap-2 sm:gap-3 mb-6 sm:mb-8 justify-start overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible sm:flex-wrap scrollbar-hide">
           {experiences.map((exp, index) => (
             <motion.button
               key={index}
               onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-lg font-medium text-sm md:text-base transition-all ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-xs sm:text-sm md:text-base transition-all whitespace-nowrap flex-shrink-0 ${
                 activeTab === index
                   ? 'bg-accent-primary text-white shadow-glow-blue'
                   : 'bg-background-card text-text-secondary hover:bg-background-hover hover:text-text-primary border border-border'

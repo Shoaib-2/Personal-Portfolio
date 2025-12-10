@@ -45,17 +45,17 @@ const CertificateModal = ({ isOpen, onClose, certificate }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-4xl h-[80vh] bg-bg-secondary rounded-2xl border border-border overflow-hidden"
+            className="relative w-full max-w-4xl h-[90vh] sm:h-[80vh] mx-2 sm:mx-4 bg-bg-secondary rounded-xl sm:rounded-2xl border border-border overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-border bg-bg-primary">
-              <h3 className="text-text-primary text-lg font-bold">{certificate?.title}</h3>
+            <div className="flex items-center justify-between p-3 sm:p-4 border-b border-border bg-bg-primary">
+              <h3 className="text-text-primary text-base sm:text-lg font-bold truncate pr-2">{certificate?.title}</h3>
               <button
                 onClick={onClose}
-                className="p-2 rounded-full hover:bg-bg-tertiary transition-colors text-text-secondary hover:text-text-primary"
+                className="p-1.5 sm:p-2 rounded-full hover:bg-bg-tertiary transition-colors text-text-secondary hover:text-text-primary flex-shrink-0"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
@@ -64,10 +64,9 @@ const CertificateModal = ({ isOpen, onClose, certificate }) => {
             <iframe
               src={certificate?.pdf}
               title={certificate?.title}
-              className="w-full h-[calc(100%-60px)]"
+              className="w-full h-[calc(100%-52px)] sm:h-[calc(100%-60px)]"
               style={{ border: 'none' }}
-            />
-          </motion.div>
+            />          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
@@ -82,22 +81,22 @@ const CertificateCard = ({ certificate, onClick }) => {
       whileHover={{ scale: 1.02, y: -5 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className="glass p-6 rounded-2xl border border-border hover:border-accent-primary transition-all duration-300 cursor-pointer group"
+      className="glass p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border hover:border-accent-primary transition-all duration-300 cursor-pointer group"
     >
-      <div className="flex items-start gap-4">
+      <div className="flex items-start gap-3 sm:gap-4">
         {/* Certificate Icon */}
-        <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-primary/10 flex items-center justify-center group-hover:bg-accent-primary/20 transition-colors">
-          <svg className="w-6 h-6 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-accent-primary/10 flex items-center justify-center group-hover:bg-accent-primary/20 transition-colors">
+          <svg className="w-5 h-5 sm:w-6 sm:h-6 text-accent-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
           </svg>
         </div>
         
-        <div className="flex-1">
-          <h3 className="text-text-primary text-xl font-bold mb-2 group-hover:text-accent-primary transition-colors">
+        <div className="flex-1 min-w-0">
+          <h3 className="text-text-primary text-lg sm:text-xl font-bold mb-1 sm:mb-2 group-hover:text-accent-primary transition-colors">
             {certificate.title}
           </h3>
-          <p className="text-text-secondary text-sm mb-3">{certificate.description}</p>
-          <div className="flex flex-wrap items-center gap-4 text-xs text-text-muted">
+          <p className="text-text-secondary text-xs sm:text-sm mb-2 sm:mb-3">{certificate.description}</p>
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs text-text-muted">
             <span className="flex items-center gap-1">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -130,20 +129,20 @@ const SkillCard = ({ title, items }) => {
   return (
     <motion.div
       variants={motionVariants.item}
-      className="glass p-6 rounded-2xl border border-border hover:border-accent-primary transition-all duration-300"
+      className="glass p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-border hover:border-accent-primary transition-all duration-300"
     >
-      <h3 className="text-text-primary text-xl font-bold mb-4">{title}</h3>
-      <ul className="space-y-3">
+      <h3 className="text-text-primary text-lg sm:text-xl font-bold mb-3 sm:mb-4">{title}</h3>
+      <ul className="space-y-2 sm:space-y-3">
         {items.map((item, idx) => (
           <motion.li
             key={idx}
-            className="flex items-center gap-3 text-text-secondary"
+            className="flex items-center gap-2 sm:gap-3 text-text-secondary"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: idx * 0.1 }}
           >
-            <div className="w-2 h-2 rounded-full bg-accent-primary" />
-            <span className="text-sm">{item}</span>
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-primary flex-shrink-0" />
+            <span className="text-xs sm:text-sm">{item}</span>
           </motion.li>
         ))}
       </ul>

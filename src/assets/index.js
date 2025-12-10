@@ -7,6 +7,7 @@ import close from "./close.svg";
 import radicalX from "./company/RadicalX.png";
 import brandlingVilla from "./company/BrandingLogo.png";
 import outlierLogo from "./company/outlierLogo.png";
+import humanityFounders from "./company/HumanityFoundersLogo.webp";
 
 // Project images
 import portfolio from "./3dportfolio.webp";
@@ -28,6 +29,7 @@ export {
   radicalX,
   brandlingVilla,
   outlierLogo,
+  humanityFounders,
   portfolio,
   sorting,
   VolunteerVilla,
