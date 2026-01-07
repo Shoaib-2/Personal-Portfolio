@@ -17,6 +17,7 @@ import reactNative from "./reactNative.webp";
 import rankforge from "./rankforge.webp";
 import SendStream from "./SendStream (1).webp";
 import CuraLink from "./CuraLink.webp";
+import ResumeRocket from "./ResumeRocketLandingPage.webp";
 
 // PDFs
 import HackathonCertificate from "./pdf/HackathonCertificate.pdf";
@@ -37,6 +38,7 @@ export {
   rankforge,
   SendStream,
   CuraLink,
+  ResumeRocket,
   HackathonCertificate
 };
 

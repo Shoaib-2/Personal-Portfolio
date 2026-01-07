@@ -10,6 +10,7 @@ import {
     rankforge,
     SendStream,
     CuraLink,
+    ResumeRocket,
   } from "../assets";
   
 export const navLinks = [
@@ -124,6 +125,36 @@ const services = [
   
   
   const projects = [
+    {
+      name: "ResumeRocket",
+      description:
+        "A full-stack desktop application automating job applications end-to-end. Features AI-powered resume tailoring with ATS score analysis, intelligent browser automation for form auto-filling, and bulk job processing. Built with Electron, React, TypeScript, and Node.js, integrating multiple AI providers (Groq, Gemini, Mistral). Published on GitHub, Gumroad, and Microsoft Store. 🚀 Available for download with a 7-day free trial!",
+      tags: [
+        {
+          name: "Electron",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "React",
+          color: "green-text-gradient",
+        },
+        {
+          name: "TypeScript",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "Node.js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Puppeteer",
+          color: "green-text-gradient",
+        },
+      ],
+      image: ResumeRocket,
+      source_code_link: "https://resumerocketprol.vercel.app/",
+    },
+
     {
       name: "CuraLink",
       description:
@@ -240,49 +271,49 @@ const services = [
       source_code_link: "https://sort-yourlife-with-algo.vercel.app/",
     },
 
-    {
-      name: "3D Porfolio",
-      description:
-        "My personal portfolio stands as a testament to my expertise and capabilities in the realm of web development. Leveraging a robust tech stack comprising React, Three.js, and Tailwind CSS, I showcase a seamless fusion of creativity and technical proficiency.",
-      tags: [
-        {
-          name: "React",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "ThreeJS",
-          color: "green-text-gradient",
-        },
-        {
-          name: "TailwindCSS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: portfolio,
-      source_code_link: "https://shoaib3-dportfolio.netlify.app/",
-    },
+    // {
+    //   name: "3D Porfolio",
+    //   description:
+    //     "My personal portfolio stands as a testament to my expertise and capabilities in the realm of web development. Leveraging a robust tech stack comprising React, Three.js, and Tailwind CSS, I showcase a seamless fusion of creativity and technical proficiency.",
+    //   tags: [
+    //     {
+    //       name: "React",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "ThreeJS",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "TailwindCSS",
+    //       color: "pink-text-gradient",
+    //     },
+    //   ],
+    //   image: portfolio,
+    //   source_code_link: "https://shoaib3-dportfolio.netlify.app/",
+    // },
    
-    {
-      name: "The Brandling Villa",
-      description:
-        "A pub restaurant website for a client. This is a static version with limited number of features, yet scalable for future usage. This was a Volunteered project, when I started web development.",
-      tags: [
-        {
-          name: "React",
-          color: "green-text-gradient",
-        },
-        {
-          name: "HTML",
-          color: "green-text-gradient",
-        },
-        {
-          name: "CSS",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: VolunteerVilla,
-      source_code_link: "https://villa-restaurant.vercel.app/",
-    },
+    // {
+    //   name: "The Brandling Villa",
+    //   description:
+    //     "A pub restaurant website for a client. This is a static version with limited number of features, yet scalable for future usage. This was a Volunteered project, when I started web development.",
+    //   tags: [
+    //     {
+    //       name: "React",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "HTML",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "CSS",
+    //       color: "pink-text-gradient",
+    //     },
+    //   ],
+    //   image: VolunteerVilla,
+    //   source_code_link: "https://villa-restaurant.vercel.app/",
+    // },
     // {
     //   name: "Roar",
     //   description:

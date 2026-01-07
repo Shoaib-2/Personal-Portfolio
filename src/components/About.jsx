@@ -81,7 +81,7 @@ const About = () => {
         <ul className="space-y-4">
           {[
             "Frontend Engineer with 2 years of hands-on experience building fast, accessible, and user-focused web apps using React, Next.js, TypeScript, and Node.js.",
-            "Worked on real products where I improved performance, cut load times, and helped boost engagement—whether it was speeding up an AI chat app, redesigning a local venue website, or launching tools powered by Google Gemini, OpenAI, you name it.",
+            "Worked on real products where I improved performance, cut load times, and helped boost engagement - whether it was speeding up an AI chat app, redesigning a local venue website, or launching tools powered by Google Gemini, OpenAI, you name it.",
             "Comfortable across the full stack, but most at home crafting clean, responsive UIs and working closely with teams to ship features that actually make a difference.",
             "Care about writing maintainable code, but more than that, I care about whether what I am building is useful and impactful."
           ].map((point, index) => (
