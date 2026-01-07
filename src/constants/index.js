@@ -128,7 +128,7 @@ const services = [
     {
       name: "ResumeRocket",
       description:
-        "A full-stack desktop application automating job applications end-to-end. Features AI-powered resume tailoring with ATS score analysis, intelligent browser automation for form auto-filling, and bulk job processing. Built with Electron, React, TypeScript, and Node.js, integrating multiple AI providers (Groq, Gemini, Mistral). Published on GitHub, Gumroad, and Microsoft Store. 🚀 Available for download with a 7-day free trial!",
+        "Available for download with a 7-day free trial! A full-stack desktop application automating job applications end-to-end. Features AI-powered resume tailoring with ATS score analysis, intelligent browser automation for form auto-filling, and bulk job processing. Built with Electron, React, TypeScript, and Node.js, integrating multiple AI providers (Groq, Gemini, Mistral). Published on GitHub, Gumroad, and Microsoft Store.",
       tags: [
         {
           name: "Electron",
